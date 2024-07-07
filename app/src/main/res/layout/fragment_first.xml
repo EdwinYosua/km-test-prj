@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_1"
-    android:paddingHorizontal="30dp"
+    android:paddingHorizontal="50dp"
     tools:context=".ui.fragment.FirstFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_photo"
+            app:layout_constraintBottom_toTopOf="@id/inplayout_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inplayout_name"
@@ -29,10 +40,52 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_button"
                 android:hint="Name" />
-
-
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inplayout_palindrome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/inplayout_name"
+            app:layout_constraintStart_toStartOf="@id/inplayout_name"
+            app:layout_constraintTop_toBottomOf="@id/inplayout_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_palindrome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_button"
+                android:hint="Palindrome" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#2B637B"
+            android:text="CHECK"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inplayout_palindrome" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#2B637B"
+            android:text="NEXT"
+            app:layout_constraintEnd_toEndOf="@id/btn_check"
+            app:layout_constraintStart_toStartOf="@id/btn_check"
+            app:layout_constraintTop_toBottomOf="@id/btn_check" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</FrameLayout>
+</ScrollView>
