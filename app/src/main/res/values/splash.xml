@@ -3,7 +3,6 @@
 
     <style name="Theme.KmTest.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#2196F3</item>
-        <item name="android:layout_gravity">center</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.KmTest</item>
     </style>
