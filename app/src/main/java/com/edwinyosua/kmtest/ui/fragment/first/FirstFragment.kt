@@ -1,4 +1,4 @@
-package com.edwinyosua.kmtest.ui.fragment
+package com.edwinyosua.kmtest.ui.fragment.first
 
 import android.os.Bundle
 import android.view.LayoutInflater

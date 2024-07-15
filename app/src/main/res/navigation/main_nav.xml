@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.edwinyosua.kmtest.ui.fragment.FirstFragment"
+        android:name="com.edwinyosua.kmtest.ui.fragment.first.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.edwinyosua.kmtest.ui.fragment.SecondFragment"
+        android:name="com.edwinyosua.kmtest.ui.fragment.second.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second">
         <action
@@ -29,6 +29,6 @@
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.edwinyosua.kmtest.ui.fragment.ThirdFragment"
+        android:name="com.edwinyosua.kmtest.ui.fragment.third.ThirdFragment"
         android:label="ThirdFragment" />
 </navigation>

@@ -1,10 +1,11 @@
-package com.edwinyosua.kmtest.ui.fragment
+package com.edwinyosua.kmtest.ui.fragment.second
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.edwinyosua.kmtest.databinding.FragmentSecondBinding
 
 
@@ -30,7 +31,11 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            txtName.text = SecondFragmentArgs.fromBundle(arguments as Bundle).name
+            txtName.text = com.edwinyosua.kmtest.ui.fragment.SecondFragmentArgs.fromBundle(arguments as Bundle).name
+
+            btnBack.setOnClickListener {
+                findNavController().popBackStack()
+            }
         }
     }
 }

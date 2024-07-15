@@ -8,7 +8,7 @@
     android:background="@drawable/background_1"
     android:fillViewport="true"
     android:paddingHorizontal="50dp"
-    tools:context=".ui.fragment.FirstFragment">
+    tools:context=".ui.fragment.first.FirstFragment">
 
 
     <LinearLayout

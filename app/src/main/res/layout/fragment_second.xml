@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.SecondFragment">
+    tools:context=".ui.fragment.second.SecondFragment">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,7 +17,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/arrow_back"
+                android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
