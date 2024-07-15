@@ -29,12 +29,8 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         binding.apply {
-
+            txtName.text = SecondFragmentArgs.fromBundle(arguments as Bundle).name
         }
     }
-
-
 }

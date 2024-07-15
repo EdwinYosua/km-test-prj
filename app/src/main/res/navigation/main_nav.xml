@@ -9,7 +9,7 @@
         android:id="@+id/firstFragment"
         android:name="com.edwinyosua.kmtest.ui.fragment.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
+        tools:layout="@layout/fragment_first">
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
@@ -18,5 +18,17 @@
         android:id="@+id/secondFragment"
         android:name="com.edwinyosua.kmtest.ui.fragment.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="John Doe" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.edwinyosua.kmtest.ui.fragment.ThirdFragment"
+        android:label="ThirdFragment" />
 </navigation>

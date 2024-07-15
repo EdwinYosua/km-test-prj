@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.edwinyosua.kmtest.R
 import com.edwinyosua.kmtest.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -30,7 +29,16 @@ class FirstFragment : Fragment() {
 
         binding.apply {
             btnNext.setOnClickListener {
-                findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+                val sendDataToSecondFragment =
+                    FirstFragmentDirections.actionFirstFragmentToSecondFragment()
+
+                if (edtName.text?.isEmpty() == true) {
+                    sendDataToSecondFragment.name
+                } else {
+                    sendDataToSecondFragment.name = edtName.text?.trim().toString()
+                }
+
+                findNavController().navigate(sendDataToSecondFragment)
             }
 
             btnCheck.setOnClickListener {
@@ -41,12 +49,12 @@ class FirstFragment : Fragment() {
                 } else {
                     showToast("Not Palindrome")
                 }
-
             }
         }
     }
 
-    private fun checkPalindrome(palindrome: String) = palindrome == palindrome.reversed()
+    private fun checkPalindrome(palindrome: String) =
+        palindrome.equals(palindrome.reversed(), ignoreCase = true)
 
     private fun showToast(msg: String) {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
