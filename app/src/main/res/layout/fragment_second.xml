@@ -2,9 +2,9 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/second_fragment"
     tools:context=".ui.fragment.second.SecondFragment">
 
 
@@ -18,11 +18,9 @@
 
             <ImageButton
                 android:id="@+id/btn_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/ImageBackButton"
                 android:background="@color/transparent"
                 android:paddingStart="16dp"
-                android:src="@drawable/arrow_back_ios_28dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -30,8 +28,6 @@
             <TextView
                 android:id="@+id/second_title"
                 style="@style/MediumBoldText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Second Screen"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -71,8 +67,6 @@
             <TextView
                 android:id="@+id/txt_name"
                 style="@style/MediumBoldText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="@id/txt_welcome"
                 app:layout_constraintTop_toBottomOf="@id/txt_welcome"
                 tools:text="John Doe" />

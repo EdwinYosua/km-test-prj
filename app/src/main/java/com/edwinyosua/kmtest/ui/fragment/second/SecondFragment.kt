@@ -50,6 +50,10 @@ class SecondFragment : Fragment() {
             btnBack.setOnClickListener {
                 findNavController().popBackStack()
             }
+
+            btnChooseUser.setOnClickListener {
+                findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToThirdFragment())
+            }
         }
     }
 }
