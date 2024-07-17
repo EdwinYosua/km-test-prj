@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.edwinyosua.kmtest.databinding.FragmentThirdBinding
 
 
@@ -38,6 +39,12 @@ class ThirdFragment : Fragment() {
                 bottomMargin = insets.bottom
             }
             WindowInsetsCompat.CONSUMED
+        }
+
+        binding.apply {
+            btnBack.setOnClickListener {
+                findNavController().popBackStack()
+            }
         }
     }
 
